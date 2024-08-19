@@ -17,3 +17,8 @@ Le dispositif se compose de 2 modules :
 
   <img src="./IMG-20240817-WA0002.jpeg" alt="drawing" width="600"/>
 
+
+Note :
+
+Le broker MQTT local peut être activé sur des box Android par une application ou sur un Raspberry Pi !
+
