@@ -13,7 +13,7 @@ Le dispositif se compose de 2 modules :
 
     - elapsedTime : intervalle entre 2 allumages LED Linky,
     - power : conso intantanée en kWh 
-    - cumul : cumul des watts depuis minuit
+    - cumul : conso en kWh depuis minuit
     - beep : si l'intervalle est inférieure à 1sec. (beep)
 
  <br />
