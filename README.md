@@ -6,7 +6,7 @@ Le dispositif se compose de 2 modules :
 
   Ce module utile une photo-transistor (plaqué sur la LED en face avant du compteur) et en série avec une résistance de quelques dizaines de kiloOhms pour détecter l'allumage de la LED (à chaque fois 1 watt est consommé). Sur mon module, GPIO 14 sur pin D5 relié au collecteur du photo transistor avec émetteur à la masse. La résistance 47kohm au 3V3.
 
-   3V3 ------ 47kOhm ------ pin D5 ----- C photo transistor E ----- Masse
+   3V3 ------ 47kOhm ------ pin D5 (GPIO 14) ----- C photo transistor E ----- Masse
   
 
   Ensuite il envoie vers un broker MQTT les topics comme intervalle entre 2 allumages, conso intantanée en kWh et le cumul des watts et un beep si l'intervalle est inférieure à 1sec.
