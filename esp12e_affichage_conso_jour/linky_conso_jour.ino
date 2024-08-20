@@ -25,7 +25,7 @@ IPAddress ip;
 // mqtt
 WiFiClient espClient;
 PubSubClient client(espClient);
-// const char* mqtt_server = "192.168.0.175";
+
 unsigned long lastMsg = 0;
 #define MSG_BUFFER_SIZE	(50)
 char msg[MSG_BUFFER_SIZE];
