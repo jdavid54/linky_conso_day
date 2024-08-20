@@ -25,7 +25,7 @@ Le dispositif se compose de 2 modules :
 
 - Module d'affichage du cumul de watts consommé depuis minuit basé sur un ESP12E avec affichage OLED :
 
-  Ce module est un ESP12E avec affichage OLED qui va permettre de recevoir du broker MQTT le topic "cumul de watts" et ainsi d'afficher la valeur.
+  Ce module est un ESP12E avec affichage OLED qui va permettre de recevoir du broker MQTT le topic "cumul" et ainsi d'afficher la valeur de la consommation en kWh depuis minuit.
 
   On peut ajouter un buzzer et utiliser le topic 'beep' pour signaler une conso de plus d'un watt à la seconde ! (topic 'elapsedTime' < 1sec)
 
