@@ -18,6 +18,8 @@ Le dispositif se compose de 2 modules :
 
   Ce module est un ESP12E avec affichage OLED qui va permettre de recevoir du broker MQTT le topic "cumul de watts" et ainsi d'afficher la valeur.
 
+  On peut ajouter un buzzer et utiliser le topic 'Beep' pour signaler une conso de plus d'un watt à la seconde ! (topic 'interval' < 1sec)
+
   <img src="./IMG-20240817-WA0002.jpeg" alt="drawing" width="600"/>
 
 
