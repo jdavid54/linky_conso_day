@@ -199,6 +199,12 @@ void wait_and_clear() {
       //u8g2.clearDisplay();       // clear display
       // show interval 
       u8g2.firstPage();
+      u8g2.setFont(u8g2_font_7x14_tf);
+      u8g2.setCursor(0, 10);
+      u8g2.print("Interval");
+      u8g2.setCursor(90, 10);
+      u8g2.print(String((interval/1000.0),1));
+      u8g2.print("s");
       do {
         float elapsed_time = (currentMillis - previousMillis)/1000.0;
         //u8g2.setFont(u8g2_font_7x14_tf);
