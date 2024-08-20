@@ -4,9 +4,9 @@ Le dispositif se compose de 2 modules :
 
 - module de détection et de comptage de l'allumage du voyant LED sur le compteur LINKY basé sur un ESP8266 :
 
-  Ce module utile une photo-transistor (plaqué sur la LED en face avant du compteur) et en série avec une résistance de quelques dizaines de kiloOhms pour détecter l'allumage de la LED (à chaque fois 1 watt est consommé)
+  Ce module utile une photo-transistor (plaqué sur la LED en face avant du compteur) et en série avec une résistance de quelques dizaines de kiloOhms pour détecter l'allumage de la LED (à chaque fois 1 watt est consommé). Sur mon module, GPIO 14 sur pin D5 relié au photo transistor côté émetteur à la masse et à la résistance 47kohm au 3V3.
 
-  Ensuite il envoie vers un broker MQTT les topics comme intervalle entre 2 allumages, conso intantanée en kWh et le cumul des watts.
+  Ensuite il envoie vers un broker MQTT les topics comme intervalle entre 2 allumages, conso intantanée en kWh et le cumul des watts et un beep si l'intervalle est inférieure à 1sec.
 
 
   <img src="./IMG_20240819_223845.jpg" alt="drawing" width="300"/>
