@@ -15,9 +15,7 @@ U8G2_SSD1306_128X64_NONAME_F_SW_I2C u8g2(U8G2_R0,/*clock*/12,/*data*/14,U8X8_PIN
 
 
 #include "credentials.h"
-// const int n_wifi = 2;
-// const char* ssid[n_wifi] = {"Tenda_8C2A30","Livebox-45bc"};
-// const char* password[n_wifi] = {"existnose620","11021956"} ;
+
 int test;
 int local;
 IPAddress ip;
