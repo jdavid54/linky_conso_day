@@ -13,7 +13,6 @@ U8G2_SSD1306_128X64_NONAME_F_SW_I2C u8g2(U8G2_R0,/*clock*/12,/*data*/14,U8X8_PIN
 // module d'affichage du cumul de conso linky par jour 
 // **********************************************************
 
-
 #include "credentials.h"
 
 int test;
