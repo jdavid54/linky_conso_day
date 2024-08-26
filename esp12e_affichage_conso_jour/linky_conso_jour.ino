@@ -221,6 +221,19 @@ void wait_and_clear() {
     } 
 }
 
+
+const char * generateUID(){
+  /* Change to allowable characters */
+  const char possible[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  static char uid[MAX_UID + 1];
+  for(int p = 0, i = 0; i < MAX_UID; i++){
+    int r = random(0, strlen(possible));
+    uid[p++] = possible[r];
+  }
+  uid[MAX_UID] = '\0';
+  return uid;
+}
+
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
@@ -229,6 +242,7 @@ void setup() {
   // https://github.com/olikraus/u8g2/wiki/setup_tutorial
   u8g2.begin();  
   u8g2.enableUTF8Print();
+
   connect_wifi(ssid[selected],password[selected]);
   // show connected
   u8g2.firstPage();
@@ -245,7 +259,10 @@ void setup() {
   // mqtt setup
   client.setServer(mqtt_server, 1883);
   client.setCallback(callback);
-  client.connect("ESP8266Client");
+  / generate ID for client 
+  const char * clientID = generateUID();
+  Serial.println(clientID);
+  client.connect(clientID);  // must be different for each module 
   // wait
   while (!client.connected()) {} 
   // subscribe
