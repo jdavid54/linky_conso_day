@@ -11,7 +11,7 @@
 
 // Constants and global variables
 #define LED 2                   // Onboard LED for visual feedback
-#define INTERRUPT_PIN 14        // GPIO 14 (D5 on ESP32 dev boards) connected to phototransistor
+#define INTERRUPT_PIN 5         // GPIO 14 (D5 on ESP32 dev boards) connected to phototransistor
 unsigned long lastInterruptTime = 0;
 bool flag = false;
 unsigned long cumul = 0;
@@ -37,7 +37,7 @@ void showTime() {
 }
 
 void do_it() {
-    digitalWrite(LED, LOW); // Turn LED ON
+    digitalWrite(LED, HIGH); // Turn LED ON
 
     now = time(nullptr);  // Update 'now'
     if ((localtime(&now)->tm_hour == 0) && (localtime(&now)->tm_min == 0) && first) {
@@ -74,7 +74,7 @@ void do_it() {
         client.publish("cumul", msg);
     }
 
-    digitalWrite(LED, HIGH);  // Turn LED OFF
+    digitalWrite(LED, LOW);  // Turn LED OFF
     flag = false;             // Reset the flag
 }
 
@@ -123,7 +123,7 @@ void setup_time() {
 void setup() {
     Serial.begin(115200);
     pinMode(LED, OUTPUT);
-    digitalWrite(LED, HIGH);   // Turn LED OFF
+    digitalWrite(LED, LOW);   // Turn LED OFF
 
     pinMode(INTERRUPT_PIN, INPUT_PULLUP);  // Configure interrupt pin
     attachInterrupt(digitalPinToInterrupt(INTERRUPT_PIN), handleInterrupt, FALLING);
