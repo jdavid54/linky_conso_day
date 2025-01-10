@@ -75,6 +75,7 @@ void do_it() {
     }
 
     digitalWrite(LED, LOW);  // Turn LED OFF
+    delay(100);              // skip led parasite blink
     flag = false;             // Reset the flag
 }
 
