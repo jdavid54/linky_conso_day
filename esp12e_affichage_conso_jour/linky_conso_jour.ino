@@ -2,8 +2,14 @@
 #include <U8g2lib.h>
 U8G2_SSD1306_128X64_NONAME_F_SW_I2C u8g2(U8G2_R0,/*clock*/12,/*data*/14,U8X8_PIN_NONE);
 
-#include <ESP8266WiFi.h>
-#include <ESP8266HTTPClient.h>
+#if defined(ESP8266) || defined(EPOXY_DUINO)
+    #include <ESP8266WiFi.h>
+    #include <ESP8266HTTPClient.h>
+#elif defined(ESP32)
+  #include <WiFi.h>
+  #include <HTTPClient.h>
+#endif
+
 #include <WiFiClient.h>
 
 #include <WiFiManager.h> // https://github.com/tzapu/WiFiManager
