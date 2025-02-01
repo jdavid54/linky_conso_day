@@ -2,7 +2,7 @@
 
 Le dispositif se compose de 2 modules :
 
-- Module de détection et de comptage de l'allumage du voyant LED sur le compteur LINKY basé sur un ESP8266 :
+- Module de détection et de comptage de l'allumage du voyant LED sur le compteur LINKY basé sur un ESP8266 ou ESP32 :
 
   Ce module utile une photo-transistor (plaqué sur la LED en face avant du compteur) et en série avec une résistance de quelques dizaines de kiloOhms pour détecter l'allumage de la LED (à chaque fois 1 watt est consommé). Sur mon module, GPIO 14 sur pin D5 relié au collecteur du photo transistor avec émetteur à la masse. La résistance 47kohm au 3V3.
 
