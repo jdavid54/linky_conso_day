@@ -1,4 +1,4 @@
-# esp12e_linky_conso_day
+# linky_conso_day
 
 Le dispositif se compose de 2 modules :
 
