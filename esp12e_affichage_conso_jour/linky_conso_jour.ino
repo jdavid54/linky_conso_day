@@ -115,7 +115,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
   Serial.println(message);
 
   // Extraire la valeur numérique (exemple avec une clé "valeur")
-  float valeurNumerique = atoi(message)/1000.0;
+  float valeurNumerique = atof(message);
   Serial.print("Valeur numérique extraite: ");
   Serial.println(valeurNumerique,3);
 
@@ -221,7 +221,7 @@ void wait_and_clear() {
     } 
 }
 
-
+#define MAX_UID 8 /* Change to whatever length you need */
 const char * generateUID(){
   /* Change to allowable characters */
   const char possible[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
