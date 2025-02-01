@@ -1,4 +1,10 @@
-#include "ESP8266WiFi.h"
+// can be used on a ESP8266 or ESP32
+#if defined(ESP8266) || defined(EPOXY_DUINO)
+    #include <ESP8266WiFi.h>
+#elif defined(ESP32)
+  #include <WiFi.h>
+#endif
+
 #include "PubSubClient.h"
 #include "credentials.h"
 
