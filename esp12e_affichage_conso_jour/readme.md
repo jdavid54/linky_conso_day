@@ -1,1 +1,1 @@
-<img src="./esp12e_oled.png" alt="drawing" width="300"/>
+<img src="./esp12e_oled.png" alt="drawing" width="600"/>
